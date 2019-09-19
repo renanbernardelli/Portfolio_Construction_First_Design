@@ -1,0 +1,313 @@
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+body{
+    perspective: 6px;
+    perspective-origin: 50% 160px;
+}
+.titulo-principal{
+    background-color: rgb(120, 30, 60);
+    border-bottom: 0.5em solid black;
+    color: #f2fffc;
+    text-align: center; /*pode ser usado para deslocar todo o conteúdo do header para o centro da página*/
+    padding: 1em;
+    position: relative;/*referência pai*/
+    transform-style: preserve-3d;
+}
+.foto-home {
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+}
+
+.titulo-principal h1{
+    text-align: center;
+    font-size: 300%;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+}
+
+.subtitulo-principal{
+    font-size: 150%;
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    padding-bottom: 0.5em;
+}
+
+.twitter-left-flag{
+    text-decoration: none;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: #f2fffc;
+    text-align: center;
+    font-size: 1em;
+}
+
+p .twitter-left-flag{
+    line-height: 1;
+    box-sizing: border-box;
+    width: 14em;
+    padding: 1em 0;
+    border: 0.25em solid black;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    background-color: #3c1d3d;
+    /*
+    transform: translate(6.5754em, -2.4749em) rotate(45deg);
+    Esse calculo foi feito com base no cos(horizontal) e sen(vertical)
+    */
+    transform: rotate(45deg) translateX(20.5%) translateY(-185%);/*esse foi feito no chute*/
+}
+
+.palavra-home{
+    /*É necessário deixar o elemento pai como "position: absolute" e determinarmos os parâmetros de tamanho e perspectiva para deixarmos 3D os elementos que estão dentro*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform-style: preserve-3d;
+}
+
+.palavra-home{
+    position: absolute;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    color: rgb(255, 127, 127);
+    font-size: 250%;
+}
+
+.eficiencia {
+    top: 50%;
+    left: 62%;
+    -webkit-transform: translate(-50%, -50%) translateZ(3.5px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3.5px) rotate(-5deg) scale(.25);
+    opacity: 0.7;
+}
+.boas-praticas {
+    top: 72%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
+    opacity: 0.3;
+}
+.codigo-limpo {
+    top: 45%;
+    left: 22%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+    opacity: 0.5;
+}
+.css3 {
+    top: 55%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+    opacity: 0.5;
+}
+.html5 {
+    top: 30%;
+    left: 70%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+    opacity: 0.5;
+}
+.javascript {
+    top: 20%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+    opacity: 0.3;
+}
+.acessibilidade {
+    top: 32%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+    opacity: 0.7;
+}
+.responsivo {
+    top: 45%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+    opacity: 0.7;
+}
+.otimizacoes {
+    top: 72%;
+    left: 65%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+    opacity: 0.5;
+}
+.agilidade {
+    top: 75%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+    opacity: 0.3;
+}
+.design {
+    top: 45%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+    opacity: 0.5;
+}
+
+.saudacao p {
+    color: #99A;
+    line-height: 1;
+    font-size: 1.5em;
+    padding: 2em;
+}
+.saudacao-inicio {
+    color: #889;
+    font-size: 3em;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    color: #000;
+    font-size: 2em;
+}
+.saudacao em {
+    color: #851944;
+    font-size: 4em;
+    transform: rotate(-5deg) skew(-10deg);/*Ao usar uma propriedade, os atributos devem ser passados todos dentro da mesma, caso contrário o CSS irá ler a última propriedade*/
+    display: inline-block;
+}
+.botao-index {
+    background-color: #851944;
+    color: #FFF;
+    border: .2em solid black;
+    width: 400px;
+    display: block;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 0.5em;
+    width: 40ch;
+    margin: 2em auto;
+}
+
+.secao-inicio{
+    padding: 1em 2em;
+}
+
+.secao-inicio a{
+    text-decoration: none;
+}
+
+.botao-index{
+    box-shadow: 0 0 5px black, inset 0 0 5px white;
+}
+
+.secao-inicio h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 0.5em;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: 0.5em solid #000;
+    border-bottom: 0.5em solid #000;
+    background-image: linear-gradient(to bottom right, transparent,
+    transparent 14%,
+    rgba(0, 0, 0, 0.2) 14%,
+    rgba(0, 0, 0, 0.2) 17%,
+    transparent 17%,
+    transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: 0.5em solid black;
+}
+.trabalhos li {
+    float: left;
+    width: 33.333%;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: 0.5em solid #851944;
+    position: relative;
+    background-image: linear-gradient(to bottom left, transparent,
+    transparent 14%,
+    rgba(255, 255, 255, 0.2) 14%,
+    rgba(255, 255, 255, 0.2) 17%,
+    transparent 17%,
+    transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+.blog .inicio-post{
+    background-color: #f2fffc;
+    color: #000;
+    position: absolute;
+    top: 4.5em;
+    right: 4em;
+    left: 30%;
+    height: 8em;
+    padding: 1.5em;
+}
+
+.blog .mais-recente{
+    background-color: #f2fffc;
+}
+
+.blog .mais-recente a{
+    color: #f26;
+}
+
+.blog small{
+    position: relative;
+    top: -2em;
+}
+
+.blog li{
+    width: 30%;
+}
+
+.blog li a {
+    color: #FCF;
+    padding: 0.5em;
+    display: block;
+}
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 2em;
+}
+
+footer h2{
+    font-size: 3em;
+}
+
+footer a {
+    color: #F99;
+}
+
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}

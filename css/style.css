@@ -1,0 +1,176 @@
+html{
+    font-size: 120%;
+}
+
+body{
+    font-family: "Crimson Text", serif;
+    background-color: #f2fffc;
+    line-height: 1.5;
+}
+
+.conteudo-principal{
+    float: left;
+    width: 85%;
+    padding-bottom: 4rem;
+}
+
+.conteudo-principal header{
+    font-size: 300%;/*alterado de 60px para 300%, pois caso o usuário aumente a fonte do navegador, o conteúdo continuaria com o valor fixo de 60px. Considerando que o tamanho padrão do navegador é de 20px, então 300% será 60px*/
+    background-color: rgb(120, 30, 60); /*ou #851944 em exadecimal*/
+    color: rgb(250, 255, 250);
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    padding: 1.25rem;/*o padding quando usado com % pega valor da largura do elemento. Usando a unidade "rem", significa que o padding se ajusta conforme o tamanho da fonte do navegado.Ex: 1.25rem = 1.25 * tamanho da fonte*/
+    margin: 0px;
+    border-bottom: 0.5rem solid black;
+    text-transform: uppercase;/*para deixar uma palavra em letras maiúsculas é importante fazer isso no CSS, pois se mudar no HTML poderá dificultar a leitura da página pelos deficientes visuais*/
+    text-shadow: 2px 2px black;
+}
+
+.conteudo-principal .bloco-main{
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;/*aumenta o espaçamento entre linhas*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    /*ou poderia usar apenas "padding: 30px 0px;"*/
+
+}
+
+.conteudo-principal h1, h2{
+    font-size: 30px;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    text-shadow: 1px 1px rgb(199, 195, 195);
+    clear: both;/*define que não permite que haja nenhum "blockquote", nesse caso, a direita e a esqueda do h1 e h2 do conteúdo principal*/
+}
+
+.conteudo-principal a{
+    color: #851944;
+}
+
+.bloco-main{
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /*ou poderia usar apenas "margin: 20px 0px;"*/
+
+}
+
+strong{
+    font-weight: bold;
+}
+
+em{
+    font-style: italic;
+}
+
+.minha_foto{
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*
+    border-radius: 50% é igual a border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; 
+    border-radius: 10% 50% / 50% 10%;
+    É possível customizar as bordas alterando os valores do eixo X e Y na vertical e horizontal.
+    */
+    /*
+    Para deixar as bordas arredondadas:
+    border-radius: 0 50%;
+    ou de forma mais específica
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    */
+}
+
+.menu-nav, .minha_foto{
+    float: right;
+    box-sizing: border-box;
+}
+.menu-nav{
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    width: 15%;
+    position: relative;
+    top: 310px;
+}
+
+.menu-nav a{
+    color: inherit;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: lowercase;
+}
+
+.menu-nav h1{
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-shadow: 2px 2px black;
+}
+
+.icones-sociais li{
+    display: inline-block;
+}
+
+nav a{
+    color: #F2FFFC;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;/*retira os marcadores da frente dos links do menu de navegação*/
+}
+
+.icones-sociais a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -9999px;/*text replacement é uma ação bem comum no desenvolvimento web para trocar o texto por uma imagem. Nesse caso eu usei "text-indent" com um valor alto e negativo para tirar o texto para o lado esquerdo da página até que ele não esteja mais visível.*/
+    /*também é possível usar "font-size: 0px" e o "color:transparent" para esconder o texto, mas alguns navegadores não terão um comportamento correto.*/
+}
+
+.github{
+    background-image: url(../img/github.png);
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+}
+
+.twitter{
+    background-image: url(../img/twitter.png);
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+}
+
+.linkedin{
+    background-image: url(../img/linkedin.png);
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+}
+
+.rodape{
+    background-image: radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8),
+    rgba(60, 29, 61, 0.8) 65%,
+    black 65%,
+    black 70%,
+    transparent 70%,
+    transparent);
+    width: 100%;
+    background-size: 25% 100%;
+    background-repeat: no-repeat;
+    color: #F2FFFC;
+    padding: 1em;
+    clear: both;
+    position: fixed;
+    bottom: 0px;
+}

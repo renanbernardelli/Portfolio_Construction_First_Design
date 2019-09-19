@@ -1,0 +1,34 @@
+.recomendacoes{
+    background-color: #D9E5E3;
+    padding: 1em;
+    border: 0.5em solid #c2ccca;
+    width: 30ch;/*define a quantidade de caracteres permitido na largura*/
+    /*margin-top: 20px;*/
+    margin-bottom: 1em;
+    /*margin-left: 40px;*/
+    /*margin-right: 40px;*/
+    /*ou poderia usar apenas "margin: 20px 40px;"*/
+    box-sizing: border-box;
+    box-shadow: 3px 3px #851944, -3px -3px #3C1D3D, 
+                6px 6px #D9E5E3, -6px -6px #D9E5E3, 
+                9px 9px #851944, -9px -9px #3C1D3D;
+}
+
+.recomendacoes cite{
+    float: right;
+    font-style: italic;
+}
+
+.fiat{
+    float: right;/*flutua um elemento dentro de seu espaço para definir uma posição*/
+    margin-left: 2em;/*calculo com base em 1em = 20px*/
+}
+
+.petrobras{
+    float: left;
+    margin-right: 2em;
+}
+
+.bloco-main p a{
+    text-decoration: none;
+}
