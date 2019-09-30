@@ -1,8 +1,9 @@
 .projetos_portfolio{
-    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .projetos_portfolio li{
-    display: inline-block;
     width: 45%;
     border: 8px solid black;
     background-color: #fafffc;
@@ -12,6 +13,15 @@
     margin-bottom: 16px;
     text-align: center;
     box-shadow: inset 0 0 5px black;
+    flex: 1 1 45%;
+}
+
+.projetos_portfolio li:nth-child(1){
+    width: 100%;
+}
+
+.projetos_portfolio li:first-child{
+    flex-basis: 100%;
 }
 
 .projetos_portfolio img{
@@ -24,7 +34,7 @@
 }
 
 .projetos_portfolio a{
-    text-decoration: none;/*retira o sublinhado que o html coloca automaticamente nas tags "a" para exibir um link*/
+    text-decoration: none;
     font-weight: bold;
 }
 

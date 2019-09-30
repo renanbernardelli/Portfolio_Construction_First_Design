@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/contato.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+        <title>Contato - Renan Bernardelli</title>
+    </head>
+
+    <body>
+        <main class="conteudo-principal">
+            <header><strong>Contato</strong></header>
+
+            <div class="bloco-main">
+                <form>
+                    <fieldset>
+                        <legend>Seus dados:</legend>
+                        <label for="name" class="com-icone">Nome: </label>
+                        <input type="text" name="name" id="name" placeholder="Nome completo" autofocus required pattern="[a-zA-Z ']{4,}" title="O nome precisa ter pelo menos 4 caracteres">
+                        <label for="e-mail" class="com-icone">E-mail: </label>
+                        <input type="email" name="e-mail" id="e-mail" placeholder="seu_email@xxx.com" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Assunto:</legend>
+                        <label>
+                            <input type="radio" name="assunto" value="blog">
+                            Blog
+                        </label>
+                        <label>
+                            <input type="radio" name="assunto" value="servico">
+                            Serviço
+                        </label>
+                        <fieldset>
+                            <input type="radio" name="assunto" value="outro" id="outro">
+                            <label for="outro">Outro: </label>
+                            <input type="text" placeholder="Digite o assunto aqui" name="assunto">
+                        </fieldset>
+                    </fieldset>
+
+                    <label for="msg">Mensagem: </label>
+                    <textarea name="mensagem" id="msg" cols="60" rows="10" required placeholder="Digite aqui a sua mensagem"></textarea>
+                    <button type="submit"><strong>Enviar</strong></button>
+                </form>
+            </div>
+        </main>
+        
+        <img src="img/eu.png" alt="Foto de Renan Bernardelli" class="minha_foto">
+        <aside class="menu-nav">
+            <div>
+                <nav>
+                    <h1>Renan Bernardelli</h1>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portifolio.html">Portifólio</a></li>
+                        <li><a href="sobremim.html">Sobre mim</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <ul class="icones-sociais">
+                    <li><a class="github" data-tooltip="Veja meus projetos opensource" href="https://github.com/renanbernardelli">Github</a></li>
+                    <li><a class="twitter" data-tooltip="Siga-me no Twitter" href="#">Twitter</a></li>
+                    <li><a class="linkedin" data-tooltip="Veja meu currículo" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <footer class="rodape">
+            &copy; Renan Bernardelli 2019
+        </footer>
+    </body>
+</html>

@@ -2,16 +2,26 @@
     background-color: #D9E5E3;
     padding: 1em;
     border: 0.5em solid #c2ccca;
-    width: 30ch;/*define a quantidade de caracteres permitido na largura*/
-    /*margin-top: 20px;*/
+    width: 30ch;
     margin-bottom: 1em;
-    /*margin-left: 40px;*/
-    /*margin-right: 40px;*/
-    /*ou poderia usar apenas "margin: 20px 40px;"*/
     box-sizing: border-box;
     box-shadow: 3px 3px #851944, -3px -3px #3C1D3D, 
                 6px 6px #D9E5E3, -6px -6px #D9E5E3, 
                 9px 9px #851944, -9px -9px #3C1D3D;
+    transition:transform 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.recomendacoes::before{
+    content: '"';
+    font-size: 1000%;
+    color: #bbb;
+    position: absolute;
+    line-height: 0.6;
+}
+
+.recomendacoes p{
+    position: relative;
 }
 
 .recomendacoes cite{
@@ -19,16 +29,71 @@
     font-style: italic;
 }
 
-.fiat{
-    float: right;/*flutua um elemento dentro de seu espaço para definir uma posição*/
-    margin-left: 2em;/*calculo com base em 1em = 20px*/
+.recomendacoes:nth-of-type(odd){
+    float: right;
+    margin-left: 2em;
 }
 
-.petrobras{
+.recomendacoes:nth-of-type(even){
     float: left;
     margin-right: 2em;
 }
 
+.recomendacoes:nth-of-type(odd):hover, .recomendacoes:nth-of-type(odd):focus{
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8),
+    3px 3px #851944, -3px -3px #3C1D3D, 
+    6px 6px #D9E5E3, -6px -6px #D9E5E3, 
+    9px 9px #851944, -9px -9px #3C1D3D;
+    transform: scale(1.2) rotate(10deg);
+    transition-delay: 0s, 0.5s;
+    /*animation-play-state: paused;*/
+}
+
+.recomendacoes:nth-of-type(even):hover, .recomendacoes:nth-of-type(even):focus{
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8),
+    3px 3px #851944, -3px -3px #3C1D3D, 
+    6px 6px #D9E5E3, -6px -6px #D9E5E3, 
+    9px 9px #851944, -9px -9px #3C1D3D;
+    transform: scale(1.2) rotate(-10deg);
+    transition-delay: 0s, 0.5s;
+    /*animation-play-state: paused;*/
+}
+
 .bloco-main p a{
     text-decoration: none;
+}
+
+.habilidades th{
+    background-color: #851944;
+    color: #D9E5E3;
+    font-weight: bold;
+    text-align: center;
+}
+
+.habilidades thead th{
+    background-color: #3C1D3D;
+}
+
+.habilidades td{
+    background-color: #eee;
+}
+
+.habilidades td,
+.habilidades th{
+    padding: 1em;
+}
+
+.habilidades{
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    margin: 1em 0;
+}
+
+.habilidades [colspan]{
+    text-align: center;
+    font-style: italic;
+}
+
+.habilidades [rowspan]{
+    vertical-align: middle;
 }

@@ -5,14 +5,15 @@ html, body{
 body{
     perspective: 6px;
     perspective-origin: 50% 160px;
+    display: block;
 }
 .titulo-principal{
     background-color: rgb(120, 30, 60);
     border-bottom: 0.5em solid black;
     color: #f2fffc;
-    text-align: center; /*pode ser usado para deslocar todo o conteúdo do header para o centro da página*/
+    text-align: center; 
     padding: 1em;
-    position: relative;/*referência pai*/
+    position: relative;
     transform-style: preserve-3d;
 }
 .foto-home {
@@ -44,7 +45,7 @@ body{
     font-size: 1em;
 }
 
-p .twitter-left-flag{
+div .twitter-left-flag{
     line-height: 1;
     box-sizing: border-box;
     width: 14em;
@@ -56,15 +57,13 @@ p .twitter-left-flag{
     right: 0;
     transform-origin: 0 0;
     background-color: #3c1d3d;
-    /*
-    transform: translate(6.5754em, -2.4749em) rotate(45deg);
-    Esse calculo foi feito com base no cos(horizontal) e sen(vertical)
-    */
-    transform: rotate(45deg) translateX(20.5%) translateY(-185%);/*esse foi feito no chute*/
+    transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
+    animation: aparece 0.5s;
+    transition-delay: 2s;
+    animation-fill-mode: backwards;
 }
 
 .palavra-home{
-    /*É necessário deixar o elemento pai como "position: absolute" e determinarmos os parâmetros de tamanho e perspectiva para deixarmos 3D os elementos que estão dentro*/
     position: absolute;
     top: 0;
     left: 0;
@@ -79,6 +78,15 @@ p .twitter-left-flag{
     font-weight: bold;
     color: rgb(255, 127, 127);
     font-size: 250%;
+    animation: aparece 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes aparece{
+    0%{
+        opacity: 0;
+        transform: scale(0.001);
+    }
 }
 
 .eficiencia {
@@ -173,6 +181,7 @@ p .twitter-left-flag{
     text-align: right;
     display: block;
 }
+
 .saudacao strong {
     color: #000;
     font-size: 2em;
@@ -180,9 +189,35 @@ p .twitter-left-flag{
 .saudacao em {
     color: #851944;
     font-size: 4em;
-    transform: rotate(-5deg) skew(-10deg);/*Ao usar uma propriedade, os atributos devem ser passados todos dentro da mesma, caso contrário o CSS irá ler a última propriedade*/
+    transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    position: relative;
+    animation: flutua 3s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes flutua{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    33.333%{
+        left: 0.25em;
+    }
+    66.666%{
+        top: 0.25em;
+    }
+    100%{
+        top: 0.5em;
+        left: 0.5em;
+    }
+}
+
+.saudacao em:hover, .saudacao em:focus{
+    animation-play-state: paused;
+}
+
 .botao-index {
     background-color: #851944;
     color: #FFF;
@@ -230,20 +265,34 @@ p .twitter-left-flag{
 .trabalhos h2 {
     color: #FFF;
 }
+
 .trabalhos ul {
-    overflow: hidden;
-    border: 0.5em solid black;
+    display: flex;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
+    border: 0.5em solid black;
 }
+
+.trabalhos li:first-child{
+    order: 2;
+    transform: scale(1.2);
+}
+
+.trabalhos li:nth-child(2){
+    order: 1;
+}
+
+.trabalhos li:last-child{
+    order: 3;
+}
+
 .trabalhos img {
     width: 100%;
     display: block;
-    border: 1px solid black;
     box-shadow: 0 0 5px black;
 }
+
 .blog {
     background-color: #999;
     color: #FFF;
@@ -259,23 +308,27 @@ p .twitter-left-flag{
     background-attachment: fixed;
 }
 
-.blog .inicio-post{
+.secao-inicio > a:hover, .secao-inicio > a:focus{
+    background-color: #c54974;
+    color: #f2fffc;
+    box-shadow: 0 0 1em #fa9;
+    transition: 0.5s;
+}
+
+.inicio-post{
     background-color: #f2fffc;
     color: #000;
     position: absolute;
-    top: 4.5em;
+    top: 7em;
     right: 4em;
     left: 30%;
     height: 8em;
     padding: 1.5em;
+    display: none;
 }
 
-.blog .mais-recente{
-    background-color: #f2fffc;
-}
-
-.blog .mais-recente a{
-    color: #f26;
+.blog a:hover + .inicio-post, .blog a:focus + .inicio-post{
+    display: block;
 }
 
 .blog small{
@@ -283,15 +336,33 @@ p .twitter-left-flag{
     top: -2em;
 }
 
-.blog li{
+.mais-recente{
     width: 30%;
 }
 
-.blog li a {
-    color: #FCF;
+.mais-recente a {
+    color: #f26;
     padding: 0.5em;
     display: block;
 }
+
+.mais-recente a:hover, .mais-recente a:focus{
+    background-color: #f2fffc;
+    position: relative;
+    animation: quica 0.5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes quica{
+    0%{
+        top: 0em;
+    }
+    100%{
+        top: 0.5em;
+    }
+}
+
 footer {
     background-color: #000;
     color: #FFF;
